@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>RH | e Você</title>
+  <meta name="description" content="Portal do Colaborador da Ferramentaria Soares">
+  <meta name="theme-color" content="#12358f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="RH | e Você">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <img class="brand" src="./logo-rh-e-voce.png" alt="RH e Você">
+      <br>
+      <img class="app-icon" src="./icon-512.png" alt="Ícone RH e Você">
+      <h1>RH | e Você</h1>
+      <p class="subtitle">Portal do Colaborador</p>
+    </section>
+    <section class="content">
+      <p class="welcome">Bem-vindo!</p>
+      <p class="description">Acesse comunicados, férias, atestados, treinamentos, avaliações e outros serviços do RH.</p>
+      <button class="btn" onclick="openPortal()">Abrir Portal RH</button>
+      <button id="installBtn" class="btn install" onclick="installApp()">Instalar aplicativo</button>
+      <div class="tip"><strong>No iPhone:</strong> abra esta página no Safari, toque em <strong>Compartilhar</strong> e escolha <strong>Adicionar à Tela de Início</strong>. A engrenagem será usada como ícone.</div>
+      <div id="portalStatus" class="status"></div>
+    </section>
+  </main>
+  <div id="configDialog" class="dialog" role="dialog" aria-modal="true">
+    <div class="dialog-card">
+      <h2>Configurar Portal RH</h2>
+      <p>Na primeira utilização, cole o endereço publicado do Google Apps Script que termina em <strong>/exec</strong>.</p>
+      <input id="portalInput" type="url" placeholder="https://script.google.com/macros/s/.../exec">
+      <div class="actions"><button class="cancel" onclick="closeDialog()">Cancelar</button><button class="save" onclick="savePortal()">Salvar e abrir</button></div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
