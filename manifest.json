@@ -1,34 +1,17 @@
 {
-  "id": "/rh-e-voce/",
-  "name": "Portal do Colaborador",
-  "short_name": "Portal RH",
-  "description": "Portal do Colaborador da Ferramentaria e Caldeiraria Soares",
-  "lang": "pt-BR",
-  "start_url": "/rh-e-voce/?source=pwa-v12",
-  "scope": "/rh-e-voce/",
+  "name": "RH | e Você",
+  "short_name": "RH | e Você",
+  "description": "Portal do Colaborador da Ferramentaria Soares",
+  "start_url": "./?source=pwa-final-2026",
+  "scope": "./",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
-  "background_color": "#ffffff",
-  "theme_color": "#124392",
   "orientation": "portrait-primary",
+  "background_color": "#eef7ff",
+  "theme_color": "#0b2d83",
   "icons": [
-    {
-      "src": "./icons/icon-192.png?v=12",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "./icons/icon-512.png?v=12",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "./icons/icon-maskable-512.png?v=12",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
+    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"icons/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"},
+    {"src":"icons/icon-1024.png","sizes":"1024x1024","type":"image/png","purpose":"any"}
   ]
 }

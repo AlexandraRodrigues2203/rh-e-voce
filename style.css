@@ -1,1 +1,28 @@
-:root{font-family:Arial,Helvetica,sans-serif;color:#0e3c87;background:#dcecff}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(160deg,#f7fbff 0%,#dcecff 52%,#bcd7f7 100%)}.shell{min-height:100vh;display:grid;place-items:center;padding:22px}.card{width:min(430px,100%);background:#fff;border-radius:28px;padding:30px 28px 26px;text-align:center;box-shadow:0 18px 50px rgba(14,60,135,.18)}.brand{display:block;width:min(310px,90%);height:auto;margin:0 auto 22px}.app-icon{display:block;margin:0 auto 12px;border-radius:28px;box-shadow:0 10px 25px rgba(14,60,135,.16)}h1{margin:8px 0 8px;font-size:2rem;line-height:1.1}.subtitle{margin:0 0 28px;font-size:1.08rem;color:#2c4f7d}.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;border:0;border-radius:14px;padding:14px 18px;margin:0 0 12px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer}.btn-install{background:#19a7e0;color:#fff}.btn-primary{background:#0e3c87;color:#fff}.btn:focus-visible{outline:3px solid #78c8ef;outline-offset:3px}.instructions{text-align:left;margin-top:32px;font-size:.9rem;color:#29466d;line-height:1.35}.instructions p{margin:8px 0}.version{margin:26px 0 0;color:#71809a;font-size:.85rem}dialog{border:0;border-radius:20px;padding:0;max-width:380px;width:calc(100% - 36px);box-shadow:0 25px 80px rgba(0,0,0,.3)}dialog::backdrop{background:rgba(0,28,70,.55)}.dialog-card{padding:24px}.dialog-card h2{margin-top:0}.dialog-card p{color:#29466d;line-height:1.5}@media (display-mode:standalone){#installButton{display:none}}
+:root{--blue:#0b2d83;--blue2:#149ee7;--text:#17335e;--bg1:#eef7ff;--bg2:#c7def7}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;color:var(--text)}
+body{background:linear-gradient(180deg,var(--bg1),var(--bg2));padding:22px}
+.shell{min-height:100vh;display:grid;place-items:center}
+.card{width:min(680px,100%);background:#fff;border-radius:30px;padding:34px 28px 28px;box-shadow:0 20px 60px rgba(10,47,135,.18);text-align:center;position:relative;overflow:hidden}
+.card:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-55px;height:120px;background:linear-gradient(180deg,#eaf4ff,#d7e9fb);border-radius:50%;z-index:0}
+.card>*{position:relative;z-index:1}
+.brand{display:block;width:min(430px,88%);height:auto;margin:0 auto 28px}
+h1{margin:0;color:var(--blue);font-size:clamp(38px,7vw,64px);line-height:1.05;font-weight:800}
+.subtitle{font-size:clamp(20px,3.6vw,30px);margin:22px 0 34px;color:#33435b}
+.actions{display:grid;gap:16px}
+.btn{border:0;border-radius:18px;min-height:74px;display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;color:#fff;font-size:clamp(20px,3.5vw,30px);font-weight:700;cursor:pointer;box-shadow:0 8px 18px rgba(10,47,135,.18);padding:16px 20px}
+.btn-primary{background:linear-gradient(180deg,#113a9a,#062e83)}
+.btn-install{background:linear-gradient(180deg,#20a7ef,#078be0)}
+.btn:active{transform:translateY(1px)}
+.install-message{margin-top:16px;padding:14px 16px;border-radius:14px;background:#eef7ff;text-align:left;line-height:1.45}
+.divider{display:flex;align-items:center;gap:16px;margin:34px 0 22px;color:#4b5e78;font-size:20px}
+.divider:before,.divider:after{content:"";height:1px;background:#cbd7e8;flex:1}
+.instructions{display:grid;gap:18px;text-align:left}
+.instruction{display:grid;grid-template-columns:58px 1fr;gap:14px;align-items:center;font-size:18px;line-height:1.35}
+.platform-icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:0}
+.platform-icon:before{font-size:30px}
+.platform-icon.apple{background:#eaf1ff}.platform-icon.apple:before{content:"";font-family:Arial;color:#113a9a}
+.platform-icon.android{background:#eef9e8}.platform-icon.android:before{content:"●";color:#42a62a}
+.instruction strong{color:var(--blue)}
+.version{margin:34px 0 0;color:#71809a;font-size:18px}
+@media (max-width:480px){body{padding:12px}.card{padding:28px 18px 24px;border-radius:24px}.brand{margin-bottom:24px}.instruction{grid-template-columns:48px 1fr;font-size:16px}.platform-icon{width:46px;height:46px}.btn{min-height:62px;border-radius:15px}}

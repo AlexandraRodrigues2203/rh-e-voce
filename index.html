@@ -3,41 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#124392">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Portal RH">
-  <link rel="manifest" href="./manifest.json?v=12">
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=12">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png?v=12">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png?v=12">
-  <title>Portal do Colaborador</title>
-  <style>
-    :root{--azul:#124392;--fundo:#dcecff;--texto:#163764}
-    *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(#eaf4ff,#cde2fb);color:var(--texto);min-height:100vh;display:grid;place-items:center;padding:22px}
-    .card{width:min(100%,660px);background:#fff;border-radius:44px;padding:48px 50px;box-shadow:0 20px 50px rgba(18,67,146,.18);text-align:center}
-    .brand{font-size:clamp(34px,7vw,68px);font-weight:800;color:var(--azul);margin-bottom:38px}.brand small{font-size:.42em;font-weight:700}
-    .icon{width:190px;height:190px;border-radius:40px;margin:0 auto 28px;box-shadow:0 18px 38px rgba(18,67,146,.18);overflow:hidden}.icon img{width:100%;height:100%;display:block}
-    h1{font-size:clamp(34px,7vw,62px);line-height:1.05;margin:10px 0 18px;color:var(--azul)}
-    p{font-size:clamp(20px,4vw,34px);margin:0 0 34px}
-    .btn{display:block;background:var(--azul);color:#fff;text-decoration:none;font-size:clamp(22px,4vw,34px);font-weight:700;border-radius:22px;padding:26px}
-    .help{text-align:left;margin-top:34px;font-size:clamp(16px,3vw,24px);line-height:1.5}.version{margin-top:30px;color:#74829b;font-size:20px}
-  </style>
+  <meta name="theme-color" content="#0a2f87">
+  <meta name="description" content="Portal do Colaborador RH | e Você">
+  <title>RH | e Você</title>
+  <link rel="manifest" href="manifest.json?v=final2026">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=final2026">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=final2026">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=final2026">
+  <link rel="shortcut icon" href="favicon.ico?v=final2026">
+  <link rel="stylesheet" href="style.css?v=final2026">
 </head>
 <body>
-  <main class="card">
-    <div class="brand">RH <small>| e você</small></div>
-    <div class="icon"><img src="./icons/icon-192.png?v=12" alt="Portal do Colaborador"></div>
-    <h1>Portal do<br>Colaborador</h1>
-    <p>Serviços do RH na palma da sua mão.</p>
-    <a class="btn" href="./app.html">Entrar no Portal RH</a>
-    <div class="help"><strong>iPhone:</strong> Safari → Compartilhar → Adicionar à Tela de Início.<br><strong>Android:</strong> Chrome → Instalar aplicativo.</div>
-    <div class="version">Versão 12.0</div>
+  <main class="shell">
+    <section class="card" aria-labelledby="titulo">
+      <img class="brand" src="logo-rh-e-voce.png?v=final2026" alt="RH | e Você">
+
+      <h1 id="titulo">Portal do Colaborador</h1>
+      <p class="subtitle">Serviços do RH na palma da sua mão.</p>
+
+      <div class="actions">
+        <a id="openPortal" class="btn btn-primary" href="#" rel="noopener noreferrer">
+          <span aria-hidden="true">↪</span> Entrar no Portal RH
+        </a>
+        <button id="installBtn" class="btn btn-install" type="button">
+          <span aria-hidden="true">⇩</span> Instalar aplicativo
+        </button>
+      </div>
+
+      <div id="installMessage" class="install-message" hidden></div>
+
+      <div class="divider"><span>Como instalar</span></div>
+
+      <div class="instructions">
+        <div class="instruction">
+          <div class="platform-icon apple">●</div>
+          <div><strong>iPhone:</strong><br>Safari → Compartilhar → Adicionar à Tela de Início.</div>
+        </div>
+        <div class="instruction">
+          <div class="platform-icon android">●</div>
+          <div><strong>Android:</strong><br>Chrome → Instalar aplicativo.</div>
+        </div>
+      </div>
+
+      <p class="version">Versão Final 2026</p>
+    </section>
   </main>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=12'));
-    }
-  </script>
+
+  <script src="config.js?v=final2026"></script>
+  <script src="app.js?v=final2026"></script>
 </body>
 </html>
