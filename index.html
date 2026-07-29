@@ -2,52 +2,54 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#063a82">
-  <meta name="description" content="Portal RH | e Você">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e3c87">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="RH | e Você">
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="manifest" href="manifest.json?v=9">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=9">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=9">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=9">
-  <link rel="stylesheet" href="style.css?v=9">
+  <meta name="description" content="Portal do Colaborador da Ferramentaria e Caldeiraria Soares">
   <title>RH | e Você</title>
+
+  <link rel="manifest" href="./manifest.json?v=10">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=10">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png?v=10">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png?v=10">
+  <link rel="stylesheet" href="./style.css?v=10">
 </head>
 <body>
-  <main class="page">
-    <section class="card" aria-labelledby="title">
-      <img class="brand-logo" src="logo-rh-e-voce.png?v=9" alt="RH | e Você">
-      <img class="app-icon" src="icons/icon-192.png?v=9" alt="Ícone de engrenagem do aplicativo">
-      <h1 id="title">Portal do Colaborador</h1>
-      <p class="lead">Serviços do RH na palma da sua mão.</p>
+  <main class="shell">
+    <section class="card" aria-labelledby="titulo">
+      <img class="brand" src="./logo-rh-e-voce.png?v=10" alt="RH | e Você">
+      <img class="app-icon" src="./icons/icon-192.png?v=10" alt="Ícone de engrenagem do aplicativo RH | e Você" width="112" height="112">
 
-      <button id="installBtn" class="btn btn-install" type="button">
+      <h1 id="titulo">Portal do Colaborador</h1>
+      <p class="subtitle">Serviços do RH na palma da sua mão.</p>
+
+      <button id="installButton" class="btn btn-install" type="button">
         <span aria-hidden="true">📲</span> Instalar aplicativo
       </button>
-      <button id="openPortal" class="btn btn-primary" type="button">
-        Entrar no Portal RH
-      </button>
 
-      <p id="installStatus" class="status" aria-live="polite"></p>
-      <p class="tip"><strong>iPhone:</strong> Safari → Compartilhar → Adicionar à Tela de Início.</p>
-      <p class="tip"><strong>Android:</strong> Chrome → Instalar aplicativo.</p>
-      <small>Versão 9.0</small>
+      <a class="btn btn-primary" href="https://script.google.com/macros/s/AKfycbztwUs4X2lbM8l9hU6hSp62z6UmwCggi9r3Q1ylOO5BL5IragcM1a1duJ67gcgnk_Vm/exec" target="_blank" rel="noopener">
+        Entrar no Portal RH
+      </a>
+
+      <div class="instructions" aria-label="Instruções de instalação">
+        <p><strong>iPhone:</strong> Safari → Compartilhar → Adicionar à Tela de Início.</p>
+        <p><strong>Android:</strong> Chrome → Instalar aplicativo.</p>
+      </div>
+
+      <p class="version">Versão 10.0</p>
     </section>
   </main>
 
-  <dialog id="installDialog">
+  <dialog id="iosDialog">
     <form method="dialog" class="dialog-card">
-      <button class="close" value="close" aria-label="Fechar">×</button>
-      <h2>Instalar RH | e Você</h2>
-      <div id="dialogContent"></div>
+      <h2>Instalar no iPhone</h2>
+      <p>Abra esta página no Safari, toque em <strong>Compartilhar</strong> e depois em <strong>Adicionar à Tela de Início</strong>.</p>
       <button class="btn btn-primary" value="close">Entendi</button>
     </form>
   </dialog>
 
-  <script src="config.js?v=9"></script>
-  <script src="app.js?v=9"></script>
+  <script src="./app.js?v=10" defer></script>
 </body>
 </html>

@@ -1,18 +1,14 @@
-# RH | e Você - Versão 9.0
+# RH | e Você — Versão 10.0
 
-PWA pronto para GitHub Pages, com:
-
-- botão Instalar aplicativo sempre visível;
-- prompt nativo no Android quando disponível;
-- instruções de instalação no iPhone;
-- engrenagem como ícone oficial;
-- link do Apps Script já configurado;
-- cache versionado para evitar arquivos antigos.
+Projeto PWA para GitHub Pages com botão de instalação e engrenagem como ícone oficial.
 
 ## Publicação
+1. Extraia o ZIP.
+2. Apague os arquivos antigos do repositório ou substitua todos pelos desta pasta.
+3. Envie também a pasta `icons`.
+4. Faça o commit.
+5. Aguarde o GitHub Pages publicar.
+6. Teste em: https://alexandrarodrigues2203.github.io/rh-e-voce/?v=10
 
-1. Apague ou substitua os arquivos antigos da raiz do repositório.
-2. Envie todos os arquivos desta pasta e a pasta `icons`.
-3. Confirme o commit.
-4. Aguarde o GitHub Pages publicar.
-5. Abra `https://alexandrarodrigues2203.github.io/rh-e-voce/?v=9`.
+## Observação
+No Android, o Chrome só libera o prompt automático quando todos os requisitos PWA estão atendidos. Caso o botão não abra o prompt, use o menu do Chrome → Instalar aplicativo/Adicionar à tela inicial.
