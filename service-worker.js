@@ -1,30 +1,20 @@
-const CACHE_NAME = 'rh-e-voce-v8-0-0';
+const CACHE = "rh-e-voce-v9-20260729";
 const ASSETS = [
-  './',
-  './index.html',
-  './style.css?v=8',
-  './app.js?v=8',
-  './config.js?v=8',
-  './manifest.json?v=8',
-  './apple-touch-icon.png?v=8',
-  './favicon-16x16.png?v=8',
-  './favicon-32x32.png?v=8',
-  './icons/icon-192.png?v=8',
-  './icons/icon-512.png?v=8',
-  './icons/icon-maskable-512.png?v=8'
+  "./",
+  "./index.html",
+  "./style.css?v=9",
+  "./app.js?v=9",
+  "./config.js?v=9",
+  "./manifest.json?v=9",
+  "./logo-rh-e-voce.png?v=9",
+  "./apple-touch-icon.png?v=9",
+  "./icons/icon-192.png?v=9",
+  "./icons/icon-512.png?v=9",
+  "./icons/icon-maskable-512.png?v=9"
 ];
-self.addEventListener('install', (event) => {
-  self.skipWaiting();
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS)));
-});
-self.addEventListener('activate', (event) => {
-  event.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)))).then(() => self.clients.claim()));
-});
-self.addEventListener('fetch', (event) => {
-  if (event.request.method !== 'GET') return;
-  event.respondWith(fetch(event.request).then((response) => {
-    const copy = response.clone();
-    caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
-    return response;
-  }).catch(() => caches.match(event.request).then((cached) => cached || caches.match('./index.html'))));
+self.addEventListener("install", e => {e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));self.skipWaiting();});
+self.addEventListener("activate", e => {e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))));self.clients.claim();});
+self.addEventListener("fetch", e => {
+  if (e.request.method !== "GET") return;
+  e.respondWith(fetch(e.request).then(r => {const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));return r;}).catch(()=>caches.match(e.request).then(r=>r||caches.match("./index.html"))));
 });

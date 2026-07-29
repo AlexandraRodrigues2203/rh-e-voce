@@ -1,12 +1,18 @@
-# RH | e Você - Versão 8.0
+# RH | e Você - Versão 9.0
 
-Projeto PWA para GitHub Pages com o endereço do Portal RH já configurado.
+PWA pronto para GitHub Pages, com:
+
+- botão Instalar aplicativo sempre visível;
+- prompt nativo no Android quando disponível;
+- instruções de instalação no iPhone;
+- engrenagem como ícone oficial;
+- link do Apps Script já configurado;
+- cache versionado para evitar arquivos antigos.
 
 ## Publicação
-1. Exclua ou substitua os arquivos antigos do repositório `rh-e-voce`.
-2. Envie todos os arquivos desta pasta, preservando a pasta `icons`.
-3. Confirme o commit e aguarde a publicação do GitHub Pages.
-4. Teste em: https://alexandrarodrigues2203.github.io/rh-e-voce/?v=8
 
-## iPhone
-Apague o atalho antigo, limpe os dados do site no Safari e adicione novamente à Tela de Início.
+1. Apague ou substitua os arquivos antigos da raiz do repositório.
+2. Envie todos os arquivos desta pasta e a pasta `icons`.
+3. Confirme o commit.
+4. Aguarde o GitHub Pages publicar.
+5. Abra `https://alexandrarodrigues2203.github.io/rh-e-voce/?v=9`.
