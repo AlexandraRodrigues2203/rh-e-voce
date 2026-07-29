@@ -9,7 +9,7 @@
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
       try {
-        const reg = await navigator.serviceWorker.register('./service-worker.js?v=10', { scope: './' });
+        const reg = await navigator.serviceWorker.register('./service-worker.js?v=11', { scope: './' });
         reg.update();
       } catch (err) {
         console.error('Falha ao registrar o service worker:', err);
