@@ -1,17 +1,20 @@
-RH | e Você - Versão 5.4 - Ícone iPhone reforçado
+RH | e Você - Versão 5.5 - Ícone iPhone reforçado
 
 IMPORTANTE - faça nesta ordem:
 
 1. No GitHub, abra o repositório rh-e-voce.
-2. Envie o arquivo engrenagem.png deste pacote para a RAIZ do repositório.
+2. Envie o arquivo app-icon.png deste pacote para a RAIZ do repositório.
 3. Confirme/Commit a alteração.
 4. Aguarde o GitHub Pages atualizar.
 5. No Safari do iPhone, abra este endereço e confirme que aparece SOMENTE a engrenagem:
-   https://alexandrarodrigues2203.github.io/rh-e-voce/engrenagem.png
+   https://alexandrarodrigues2203.github.io/rh-e-voce/app-icon.png
 6. Somente depois substitua Codigo.gs e index.html no Apps Script e implante uma NOVA versão.
 7. No iPhone, APAGUE o atalho antigo que aparece com a letra R.
 8. Feche o Safari completamente e abra novamente o link do Portal.
 9. Safari > Compartilhar > Adicionar à Tela de Início > Adicionar.
 
-A Versão 5.4 usa apple-touch-icon com cache-busting (?v=54) para evitar que o iPhone reaproveite o ícone antigo.
+A Versão 5.5 usa apple-touch-icon com cache-busting (?v=55) para evitar que o iPhone reaproveite o ícone antigo.
 Nome configurado: RH | Você | Ferramentaria Soares.
+
+
+Versão 5.5: o ícone do iPhone/atalho agora aponta para https://alexandrarodrigues2203.github.io/rh-e-voce/app-icon.png?v=55
