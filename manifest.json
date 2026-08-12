@@ -1,17 +1,25 @@
 {
-  "name": "RH | e Você",
+  "name": "RH | e Você | Ferramentaria Soares",
   "short_name": "RH | e Você",
-  "description": "Portal do Colaborador da Ferramentaria Soares",
-  "start_url": "./?source=pwa-final-2026",
+  "description": "Portal do colaborador da Ferramentaria Soares",
+  "lang": "pt-BR",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait-primary",
-  "background_color": "#eef7ff",
-  "theme_color": "#0b2d83",
+  "background_color": "#F4F7FA",
+  "theme_color": "#17388F",
   "icons": [
-    {"src":"icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
-    {"src":"icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
-    {"src":"icons/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"},
-    {"src":"icons/icon-1024.png","sizes":"1024x1024","type":"image/png","purpose":"any"}
+    {
+      "src": "app-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }
